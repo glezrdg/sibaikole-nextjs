@@ -1,0 +1,11 @@
+.gallery {
+    max-width: 1800px;
+    margin: 0 auto;
+    column-count: 5;
+    font-family: arial;
+    
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }

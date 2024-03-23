@@ -1,20 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -31,3 +22,285 @@ body {
     text-wrap: balance;
   }
 }
+
+.web-font{
+  font-family: 'Titillium Web', sans-serif;
+  /* font-family: 'Cabin', sans-serif; */
+
+}
+*{
+  font-family: 'Cabin', sans-serif;
+}
+
+
+.transition-duration{
+  transition: 300ms
+}
+
+.gallery {
+  max-width: 1800px;
+  margin: 0 auto;
+  column-count: 5;
+  font-family: arial;
+  
+}
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+.background2{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%);
+}
+
+.background{
+  background: rgb(209,209,209);
+  background: linear-gradient(0deg, rgba(209,209,209,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.words-up{
+  display: block;
+  height: 100%;
+  animation: spin_words 4s infinite;
+}
+
+@keyframes spin_words{
+  10%{
+      transform: translateY(-112%);
+  }
+  25%{
+      transform: translateY(-100%);
+  }
+  35%{
+      transform: translateY(-212%);
+  }
+  50%{
+      transform: translateY(-200%);
+  }
+  60%{
+      transform: translateY(-312%);
+  }
+  75%{
+      transform: translateY(-300%);
+  }
+  85%{
+      transform: translateY(-412%);
+  }
+  100%{
+      transform: translateY(-400%);
+  }
+}
+
+.overlay-menu{
+  height: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.96);
+  opacity: 0;
+  overflow-y: hidden;
+  transition: 250ms ease-in-out;
+}
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+html{
+  scroll-behavior: smooth;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::-moz-selection { /* Code for Firefox */
+  
+  color: white;
+  background-color: rgb(110, 78, 78)
+}
+
+::selection {
+  color: white;
+  background-color:  rgb(110, 78, 78)
+}
+
+.web-font{
+  font-family: 'Titillium Web', sans-serif;
+  /* font-family: 'Cabin', sans-serif; */
+
+}
+
+
+.overlay-menu .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 16vw;
+  font-size: 60px;
+}
+
+.redondo{
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  right: 0;
+  left: 5%;
+  bottom: 0;
+  width: 90%;
+  height: 55%;
+  border-radius: 100%;
+}
+.redondo-num{
+  
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+
+@media (max-width: 1024px) {
+  .redondo{
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    border-radius: 100%;
+  }
+  .redondo-num{
+    font-size: 5rem;
+    
+  }
+}
+
+.transition{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 450ms;
+}
+
+
+
+/* photos  portfolio hover */
+
+.figure {
+  position: relative;
+  /* animation-name: difuminado;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; */
+}
+
+.image {
+  display: block;
+ 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+ 
+  
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  user-select: none;
+  
+}
+@media (max-width:1024px) {
+  .overlay{
+    animation-name: difuminado;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+  }
+}
+.figure:hover{
+  --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.figure:hover .overlay {
+  opacity: 1;
+  
+}
+
+
+/* animations */
+@keyframes difuminado {
+  0% { opacity: 0; }
+  40% {
+    opacity: 1  ;
+    
+   }
+   60%{opacity: 1;}
+   100% {opacity:0;}
+}
+
+.text {
+  color: white;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* inputs  */
+
+.inputs{
+  background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,.12);
+    border-radius: 0;
+    color: #000;
+    padding-left: 0!important;
+    font-size: 1.3rem;
+    margin-top: 8px;
+}
+.inputs:focus{
+
+  outline: none;
+}
+
+
+.el-p::first-letter{
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+    font-weight: 500;
+    margin-right: .75em;
+  }
+  
+  @media screen and (max-width: 900px) { 
+    .el-p::first-letter{
+      -webkit-initial-letter: 2;
+  initial-letter: 2;
+    font-weight: 500;
+    margin-right: .75em;
+    }
+  }
