@@ -118,7 +118,8 @@ const Portfolio = () => {
     console.log(
       images[imageIndex].url,
       window.innerHeight,
-      window.innerHeight * 0.2
+      window.innerHeight * 0.2,
+      "guan jondre tueni"
     );
   });
 

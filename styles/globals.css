@@ -309,7 +309,17 @@ html{
     margin: 0 auto;
     column-count: 4;
     font-family: arial;
-    
+  
+  }
+  @media screen and (max-width: 425px) { 
+   .gallery{
+    column-count: 2;
+   }
+  }
+  @media screen and (max-width: 768px) { 
+   .gallery{
+    column-count: 3;
+   }
   }
   .gallery-item {
     break-inside: avoid;

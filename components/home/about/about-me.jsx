@@ -7,16 +7,16 @@ const About = () => {
   return (
     <section
       id="about"
-      className=" h-[130vh]  max-sm:h-full   flex flex-col justify-evenly  "
+      className=" h-[150vh] md:h-[120vh]  max-sm:h-full   flex flex-col justify-evenly  "
     >
-      <div className="text-center ">
+      <div className="text-center mt-10">
         <span className="bg-[#7f2627] text-zinc-100 p-1">Historia</span>
-        <h2 className="text-5xl max-sm:mt-2  font-semibold xl:mt-5 lg:mt-2 md:mt-0 ">
+        <h2 className="text-5xl max-md:text-4xl max-sm:mt-2  font-semibold xl:mt-5 lg:mt-2 md:mt-0 ">
           Te contamos de donde venimos
         </h2>
       </div>
-      <div className=" flex flex-col justify-evenly items-center ">
-        <div className="text-lg  text-justify font-semibold text-balance grid grid-cols-2 gap-10 ">
+      <div className=" flex flex-col  items-center  px-5 mt-5 md:m-0 overflow-y-scroll h-[60vh]">
+        <div className=" text-xs md:text-lg lg:text-lg  text-justify font-semibold text-balance grid md:grid-cols-1  lg:grid-cols-2 gap-5 ">
           <p className="el-p">
             Desde las vibrantes calles de Manzanillo, Cuba, hasta el corazón
             cultural de la República Dominicana, la historia de SibaIkole y su
@@ -82,7 +82,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="grid xl:grid-cols-4 xl:place-items-start lg:grid-cols-2 lg:gap-3 lg:place-items-center md:grid-cols-2 md:gap-3 md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
+      <div className="grid xl:grid-cols-4 xl:place-items-start  lg:gap-3 lg:place-items-center md:grid-cols-4   md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
         <a
           className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#4267B2] hover:scale-105 transition-all"
           href="https://www.facebook.com/profile.php?id=100083310222111"
@@ -108,8 +108,8 @@ const About = () => {
         </a>
 
         <div>
-          <h2 className="text-2xl max-sm:text-lg font-bold">
-            Santo Domingo, República Dominicana
+          <h2 className="text-xl max-sm:text-lg font-bold">
+            Santo Domingo, R.D.
           </h2>
         </div>
       </div>
