@@ -115,7 +115,7 @@ function HomePrincipal({ children }) {
           <div className="flex flex-col justify-evenly items-center h-1/2">
             <a
               href="#home"
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all  "
               onClick={closeNav}
             >
               Home
@@ -123,41 +123,41 @@ function HomePrincipal({ children }) {
             <a
               href="#about"
               onClick={closeNav}
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all "
             >
               About me
             </a>
             <a
               href="#skills"
               onClick={closeNav}
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all "
             >
               What I Do
             </a>
             <a
               href="#summary"
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all "
               onClick={closeNav}
             >
               Resume
             </a>
             <a
               href="#portfolio"
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all "
               onClick={closeNav}
             >
               Portfolio
             </a>
             <a
               href="#contact"
-              className="hover:text-yellow-300 transition-all "
+              className="hover:text-[#7f2627] transition-all "
               onClick={closeNav}
             >
               Contact
             </a>
             <a
               href="https://github.com/glezrdg"
-              className="flex items-center web-font font-bold hover:text-yellow-300 transition-all ml-3 mt-5 text-4xl"
+              className="flex items-center web-font font-bold hover:text-[#7f2627] transition-all ml-3 mt-5 text-4xl"
               target="_blank"
             >
               GitHub
@@ -169,25 +169,17 @@ function HomePrincipal({ children }) {
           className={`w-[100vw] xl:w-[68vw] xl:m-auto  md:mx-10 lg:mx-10 flex items-center justify-between web-font max-sm:w-full max-sm:px-2 `}
         >
           <h1 className="text-3xl font-bold">SIBAIKOLE</h1>
-          <ul className="flex w-1/3  uppercase justify-evenly items-center font-bold text-lg">
-            <li className="">
-              <a href="#home">Inicio</a>
-            </li>
-            <li className="">
-              <a href="#services"></a> Servicios
-            </li>
-            <li className="#works">
-              <a href="">Trabajos</a>
-            </li>
-            <li className="#about">
-              <a href="">Historia</a>
-            </li>
-          </ul>
-
-          <button className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 font-semibold text-lg px-10 py-2 ">
-            Contacto
-          </button>
-
+          <div className="flex w-1/3  uppercase justify-evenly items-center font-bold text-lg">
+            <a href="#home">Inicio</a>
+            <a href="#skills">Servicios</a>
+            <a href="#portfolio">Trabajos</a>
+            <a href="#about">Historia</a>
+          </div>
+          <a href="#contact">
+            <button className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 font-semibold text-lg px-10 py-2 ">
+              Contacto
+            </button>
+          </a>
           <div className="lg:hidden" onClick={openNav}>
             <RxHamburgerMenu className="text-4xl max-sm:text-3xl hover:scale-110 transition-all" />
           </div>

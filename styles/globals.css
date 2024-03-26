@@ -304,3 +304,41 @@ html{
     margin-right: .75em;
     }
   }
+  .gallery {
+    max-width: 1800px;
+    margin: 0 auto;
+    column-count: 4;
+    font-family: arial;
+    
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    transition: 200ms ease-in-out;
+  }
+  .gallery-item:hover{
+    transform: scale(1.02);
+  }
+
+  
+.modal::backdrop{
+
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  
+}
+
+
+/* .modal{
+  -webkit-box-shadow: 5px 5px 22px 3px rgba(0,0,0,0.63); 
+box-shadow: 5px 5px 22px 3px rgba(0,0,0,0.63);
+} */
+
+input, select, textarea{
+  color: #fff;
+}
+
+textarea:focus, input:focus {
+  color: #fff;
+}

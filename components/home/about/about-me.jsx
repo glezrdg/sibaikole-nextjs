@@ -83,20 +83,26 @@ const About = () => {
         </div>
       </div>
       <div className="grid xl:grid-cols-4 xl:place-items-start lg:grid-cols-2 lg:gap-3 lg:place-items-center md:grid-cols-2 md:gap-3 md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
-        <a className="text-2xl max-sm:text-lg font-bold flex items-center">
+        <a
+          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#4267B2] hover:scale-105 transition-all"
+          href="https://www.facebook.com/profile.php?id=100083310222111"
+        >
           <FaFacebook />
           <span className="ml-3">Facebook</span>
         </a>
 
         <a
-          href="https://platzi.com/p/glezrdg"
-          className="text-2xl max-sm:text-lg font-bold flex items-center"
+          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#E1306C] hover:scale-105 transition-all"
+          href="https://www.instagram.com/sibaikole/ "
         >
           <AiFillInstagram />
           <span className="ml-3">Instagram</span>
         </a>
 
-        <a className="text-2xl max-sm:text-lg font-bold flex items-center">
+        <a
+          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#25D366] hover:scale-105 transition-all"
+          href="https://wa.me/18494909772 "
+        >
           <IoLogoWhatsapp />
           <span className="ml-2">Whatsapp</span>
         </a>

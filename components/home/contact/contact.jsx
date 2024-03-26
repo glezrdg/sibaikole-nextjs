@@ -24,24 +24,17 @@ const Contact = () => {
             </span>
           </div>
           <p className="w-4/5 text-2xl ">
-            Would love to hear what my skills are able to do for you and your
-            upcoming projects, my path its the growth path and I love watch the
-            human kind grow together as brothers.
+            Estamos ansiosos por descubrir cómo nuestras habilidades pueden
+            contribuir a tus futuros proyectos. Escríbenos y crezcamos juntos en
+            este camino de progreso e innovación.
           </p>
-
-          <div className="h-[15vh]  flex  items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Call or Message: </h3>
-              <span className="font-semibold ml-2">+1 (829) 464 9960</span>
-            </div>
-          </div>
         </div>
-        <div className="flex flex-col md:w-5/6 md:items-center w-1/2 h-[60vh] max-sm:w-full max-sm:h-1/2 max-sm:px-5">
-          <div className="h-[15vh] max-lg:h-[25vh] max-sm:text-center">
+        <div className="flex flex-col md:w-5/6 w-1/2 h-[60vh] max-sm:w-full max-sm:h-1/2 max-sm:px-5">
+          <div className="h-[15vh]  mx-0 ">
             <h1 className="mb-2 text-5xl max-sm:text-4xl  font-semibold">
-              Tell me about your new project
+              Cuentanos sobre tu proyecto!
             </h1>
-            <span className="  font-semibold ">Or your proposal... </span>
+            <span className="  font-semibold ">O tu propuesta... </span>
           </div>
           <Formik
             initialValues={{
@@ -50,16 +43,14 @@ const Contact = () => {
               description: "",
             }}
             validationSchema={Yup.object({
-              name: Yup.string().required("Required"),
-              email: Yup.string()
-                .email("Invalid email address")
-                .required("Required"),
-              description: Yup.string().required("Required"),
+              name: Yup.string().required("Requerido"),
+              email: Yup.string().email("Email Invalido").required("Requerido"),
+              description: Yup.string().required("Requerido"),
             })}
             onSubmit={async (values, actions) => {
               try {
                 await createEmail(values);
-                toast.success("Email sent successfully");
+                toast.success("Email enviado exitosamente!");
                 actions.resetForm();
               } catch (error) {
                 console.error(error);
@@ -70,9 +61,9 @@ const Contact = () => {
             <Form className="flex flex-col md:w-full">
               <div className="flex flex-col ">
                 <label htmlFor="" className="text-lg">
-                  Your name or company:
+                  Tu nombre o compañía:
                 </label>
-                <Field type="text" className="inputs " name="name" />
+                <Field type="text" className="inputs" name="name" />
                 <ErrorMessage
                   name="name"
                   component="p"
@@ -81,7 +72,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col mt-4">
                 <label htmlFor="" className="text-lg">
-                  Your Email Address
+                  Tu correo electrónico:
                 </label>
                 <Field type="text" className="inputs" name="email" />
                 <ErrorMessage
@@ -92,7 +83,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col mt-4">
                 <label htmlFor="" className="text-lg">
-                  How may I assist you?
+                  ¿Cómo podemos ayudarte?
                 </label>
                 <Field
                   name="description"
@@ -109,9 +100,9 @@ const Contact = () => {
               <div className="w-full flex justify-end">
                 <button
                   type="submit"
-                  className="font-bold px-8 py-3 mt-5 border text-zinc-800 border-zinc-800 flex items-center   hover:bg-zinc-800 hover:text-white transition"
+                  className="font-bold px-10 py-3 mt-5 hover:text-zinc-800 hover:bg-[#7f2627]  flex items-center  border border-zinc-800 bg-zinc-800 text-white transition"
                 >
-                  Submit
+                  Enviar
                 </button>
               </div>
             </Form>
@@ -121,7 +112,7 @@ const Contact = () => {
       <footer className="relative w-full  h-[15vh] flex items-center justify-center bg-zinc-800">
         <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] bg-zinc-800 max-lg:hidden md:hidden xl:flex"></div>
         <h1 className="text-white text-xl text-center">
-          Copyright © 2023 Germán. All Rights Reserved.
+          Copyright Just Digital AI © 2023 All Rights Reserved.
         </h1>
       </footer>
     </section>

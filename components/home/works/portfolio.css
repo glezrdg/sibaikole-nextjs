@@ -1,11 +1,15 @@
 .gallery {
     max-width: 1800px;
     margin: 0 auto;
-    column-count: 5;
+    column-count: 4;
     font-family: arial;
     
   }
   .gallery-item {
     break-inside: avoid;
     margin-bottom: 16px;
+    transition: 250ms ease-in-out;
+  }
+  .gallery-item:hover{
+    transform: scale(1.05);
   }

@@ -8,37 +8,11 @@ import {
 import { TbCircleDot } from "react-icons/tb";
 
 function Slider({ items }) {
-  //   const [imageIndex, setImageIndex] = useState(0);
 
-  //   const items = [
-  //     {
-  //       title: "Proyectos Arquitectonicos",
-  //       description:
-  //         " ¡Transforma tus sueños en realidad con nuestro servicio de Diseño Arquitectónico! Con una combinación de creatividad y experiencia, creamos espacios que cautivan, inspiran y funcionan a la perfección.Desde renovaciones elegantes hasta proyectos comerciales impresionantes, estamos aquí para dar vida a tu visión. ",
-  //       lastSentence: "¡Déjanos diseñar un futuro extraordinario para ti!",
-  //     },
-  //     {
-  //       title: "Construccion",
-  //       description: "lorem imsupm",
-  //       lastSentence: "¡Déjanos diseñar un futuro extraordinario para ti!",
-  //     },
-  //     {
-  //       title: "Remodelaciones",
-  //       description: "lorem imsupm",
-  //       lastSentence: "¡Déjanos diseñar un futuro extraordinario para ti!",
-  //     },
-  //     {
-  //       title: "Supervision",
-  //       description: "lorem imsupm",
-  //       lastSentence: "¡Déjanos diseñar un futuro extraordinario para ti!",
-  //     },
-  //   ];
   const [imageIndex, setImageIndex] = useState(0);
   const [direction, setDirection] = useState(false);
 
-  useEffect(() => {
-    console.log(imageIndex, items);
-  }, [imageIndex]);
+
 
   const showNext = () => {
     if (direction == false) {
