@@ -1,17 +1,16 @@
-import React from "react";
-import { BsGithub } from "react-icons/bs";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import toast, { Toaster } from "react-hot-toast";
+import * as Yup from "yup";
 // import { createEmail } from "../../api/email.controller";
 
 const Contact = () => {
   return (
     <section
       id="contact"
+      aria-label="Contact Section" // Describes the section of the page
       className="xl:h-[100vh] lg:h-[100vh] md:h-[160vh] max-sm:h-[150vh]  cursor-pointer relative bg-[#7f2627]  text-zinc-100 flex flex-col justify-between w-full"
     >
-      <Toaster />
+      <Toaster aria-label="Notification Messages" />
       <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] bg-[#7f2627]  lg:hidden md:hidden max-sm:hidden xl:flex "></div>
       <div className="xl:h-4/5 md:h-4/5 flex xl:flex-row lg:flex-row justify-center items-center xl:p-0 lg:px-10 md:flex-col md:w-full max-sm:flex-col ">
         <div className="w-1/2 max-sm:w-full  md:w-5/6 h-[60vh] xl:items-start lg:items-start md:items-center  flex flex-col   max-sm:items-center max-sm:justify-center">
@@ -58,12 +57,18 @@ const Contact = () => {
               }
             }}
           >
-            <Form className="flex flex-col md:w-full">
-              <div className="flex flex-col ">
-                <label htmlFor="" className="text-lg">
+            <Form className="flex flex-col md:w-full" aria-label="Contact Form">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="text-lg">
                   Tu nombre o compañía:
                 </label>
-                <Field type="text" className="inputs" name="name" />
+                <Field
+                  type="text"
+                  className="inputs"
+                  name="name"
+                  id="name"
+                  aria-label="Your Name or Company"
+                />
                 <ErrorMessage
                   name="name"
                   component="p"
@@ -71,10 +76,16 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col mt-4">
-                <label htmlFor="" className="text-lg">
+                <label htmlFor="email" className="text-lg">
                   Tu correo electrónico:
                 </label>
-                <Field type="text" className="inputs" name="email" />
+                <Field
+                  type="text"
+                  className="inputs"
+                  name="email"
+                  id="email"
+                  aria-label="Your Email"
+                />
                 <ErrorMessage
                   component="p"
                   className="text-red-500 font-semibold"
@@ -82,7 +93,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col mt-4">
-                <label htmlFor="" className="text-lg">
+                <label htmlFor="description" className="text-lg">
                   ¿Cómo podemos ayudarte?
                 </label>
                 <Field
@@ -90,6 +101,8 @@ const Contact = () => {
                   as="textarea"
                   rows="3"
                   className="inputs"
+                  id="description"
+                  aria-label="How Can We Help You?"
                 />
                 <ErrorMessage
                   component="p"
@@ -99,8 +112,9 @@ const Contact = () => {
               </div>
               <div className="w-full flex justify-end">
                 <button
+                  aria-label="Send your message"
                   type="submit"
-                  className="font-bold px-10 py-3 mt-5 hover:text-zinc-800 hover:bg-[#7f2627]  flex items-center  border border-zinc-800 bg-zinc-800 text-white transition"
+                  className="font-bold px-10 py-3 mt-5 hover:text-zinc-800 hover:bg-[#7f2627] flex items-center border border-zinc-800 bg-zinc-800 text-white transition"
                 >
                   Enviar
                 </button>

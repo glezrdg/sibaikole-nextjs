@@ -1,22 +1,22 @@
-import React from "react";
-import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const About = () => {
   return (
     <section
       id="about"
-      className=" h-[150vh] md:h-[120vh]  max-sm:h-full   flex flex-col justify-evenly  "
+      className="h-[150vh] md:h-[120vh] max-sm:h-full flex flex-col justify-evenly"
+      aria-label="About Us" // Labeling the section for better context
     >
       <div className="text-center mt-10">
         <span className="bg-[#7f2627] text-zinc-100 p-1">Historia</span>
-        <h2 className="text-5xl max-md:text-4xl max-sm:mt-2  font-semibold xl:mt-5 lg:mt-2 md:mt-0 ">
+        <h2 className="text-5xl max-md:text-4xl max-sm:mt-2 font-semibold xl:mt-5 lg:mt-2 md:mt-0">
           Te contamos de donde venimos
         </h2>
       </div>
-      <div className=" flex flex-col  items-center  px-5 mt-5 md:m-0 overflow-y-scroll h-[60vh]">
-        <div className=" text-xs md:text-lg lg:text-lg  text-justify font-semibold text-balance grid md:grid-cols-1  lg:grid-cols-2 gap-5 ">
+      <div className="flex flex-col items-center px-5 mt-5 md:m-0 overflow-y-scroll h-[60vh]">
+        <div className="text-xs md:text-lg lg:text-lg text-justify font-semibold text-balance grid md:grid-cols-1 lg:grid-cols-2 gap-5">
           <p className="el-p">
             Desde las vibrantes calles de Manzanillo, Cuba, hasta el corazón
             cultural de la República Dominicana, la historia de SibaIkole y su
@@ -82,28 +82,31 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="grid xl:grid-cols-4 xl:place-items-start  lg:gap-3 lg:place-items-center md:grid-cols-4   md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
+      <div className="grid xl:grid-cols-4 xl:place-items-start lg:gap-3 lg:place-items-center md:grid-cols-4 md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
         <a
           className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#4267B2] hover:scale-105 transition-all"
           href="https://www.facebook.com/profile.php?id=100083310222111"
+          aria-label="Follow us on Facebook" // Adding an aria-label for screen readers
         >
-          <FaFacebook />
+          <FaFacebook aria-hidden="true" />
           <span className="ml-3">Facebook</span>
         </a>
 
         <a
           className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#E1306C] hover:scale-105 transition-all"
-          href="https://www.instagram.com/sibaikole/ "
+          href="https://www.instagram.com/sibaikole/"
+          aria-label="Follow us on Instagram" // Adding an aria-label for screen readers
         >
-          <AiFillInstagram />
+          <AiFillInstagram aria-hidden="true" />
           <span className="ml-3">Instagram</span>
         </a>
 
         <a
           className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#25D366] hover:scale-105 transition-all"
-          href="https://wa.me/18494909772 "
+          href="https://wa.me/18494909772"
+          aria-label="Contact us on Whatsapp" // Adding an aria-label for screen readers
         >
-          <IoLogoWhatsapp />
+          <IoLogoWhatsapp aria-hidden="true" />
           <span className="ml-2">Whatsapp</span>
         </a>
 

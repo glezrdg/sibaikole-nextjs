@@ -65,7 +65,6 @@ function HomePrincipal({ children }) {
       position: 4378.5,
       path: "#contact",
     },
-   
   ];
 
   const ScrollToScreen = (type) => {
@@ -96,7 +95,7 @@ function HomePrincipal({ children }) {
   };
 
   return (
-    <div>
+    <div aria-label="container">
       <header
         className={`flex items-center transition-all fixed z-10 xl:h-[7vh] lg:h-[10vh] md:h-[10vh] max-sm:h-[10vh] left-0 right-0 top-0 cursor-pointer    ${
           scrollNav ? "bg-white shadow-md" : "bg-transparent"
@@ -105,14 +104,26 @@ function HomePrincipal({ children }) {
         <div
           className="overlay-menu flex items-center justify-center text-2xl font-bold text-white"
           ref={menu}
+          role="dialog" // Assuming this is a modal-type overlay
+          aria-modal="true" // Marks this as a modal dialog, blocking the main content
+          aria-labelledby="overlayTitle" // Provides an accessible name for the dialog
         >
-          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
-            &times;
-          </a>
+          <h2 id="overlayTitle" className="sr-only">
+            Menu
+          </h2>{" "}
+          {/* Hidden title for screen readers */}
+          <button // Changed from <a> to <button> for semantic correctness
+            className="closebtn"
+            onClick={closeNav}
+            aria-label="Close menu" // Provides a clear label for the action
+          >
+            &times;{" "}
+            {/* Visually indicates close, but the aria-label explains it */}
+          </button>
           <div className="flex flex-col justify-evenly items-center h-1/2">
             <a
               href="#home"
-              className="hover:text-[#7f2627]  transition-all  "
+              className="hover:text-[#7f2627] transition-all"
               onClick={closeNav}
             >
               Inicio
@@ -120,13 +131,13 @@ function HomePrincipal({ children }) {
             <a
               href="#skills"
               onClick={closeNav}
-              className="hover:text-[#7f2627]  transition-all "
+              className="hover:text-[#7f2627] transition-all"
             >
               Servicios
             </a>
             <a
               href="#portfolio"
-              className="hover:text-[#7f2627]  transition-all "
+              className="hover:text-[#7f2627] transition-all"
               onClick={closeNav}
             >
               Trabajos
@@ -134,72 +145,92 @@ function HomePrincipal({ children }) {
             <a
               href="#about"
               onClick={closeNav}
-              className="hover:text-[#7f2627]  transition-all "
+              className="hover:text-[#7f2627] transition-all"
             >
               Historia
             </a>
-
             <a
               href="#contact"
-              className="hover:text-[#7f2627]  transition-all "
+              className="hover:text-[#7f2627] transition-all"
               onClick={closeNav}
             >
               Contacto
             </a>
           </div>
         </div>
+
         <nav
-          className={`w-[100vw] xl:w-[68vw] xl:m-auto  md:mx-10 lg:mx-10 flex items-center justify-between web-font  max-sm:px-2 `}
+          className={`w-[100vw] xl:w-[68vw] xl:m-auto md:mx-10 lg:mx-10 flex items-center justify-between web-font max-sm:px-2`}
         >
-          <div className="lg:hidden" onClick={openNav}>
-            <RxHamburgerMenu className="text-4xl ml-3 max-sm:text-3xl hover:scale-110 transition-all" />
-          </div>
-          <h1 className="text-3xl font-bold hover:text-[#7f2627] hover:scale-105  transition-all ">
+          <button onClick={openNav} className="lg:hidden">
+            <RxHamburgerMenu
+              className="text-4xl ml-3 max-sm:text-3xl hover:scale-110 transition-all"
+              aria-label="Open navigation menu"
+            />
+          </button>
+          <a
+            href="#home"
+            className="text-3xl font-bold hover:text-[#7f2627] hover:scale-105 transition-all"
+          >
             SIBAIKOLE
-          </h1>
-          <div className="hidden xl:flex w-1/3 lg:w-1/2  uppercase justify-evenly items-center font-bold text-lg">
+          </a>
+          <div className="hidden xl:flex w-1/3 lg:w-1/2 uppercase justify-evenly items-center font-bold text-lg">
             <a
-              className="hover:text-[#7f2627] hover:scale-105  transition-all "
+              className="hover:text-[#7f2627] hover:scale-105 transition-all"
               href="#home"
             >
               Inicio
             </a>
             <a
-              className="hover:text-[#7f2627] hover:scale-105  transition-all "
+              className="hover:text-[#7f2627] hover:scale-105 transition-all"
               href="#skills"
             >
               Servicios
             </a>
             <a
-              className="hover:text-[#7f2627] hover:scale-105  transition-all "
+              className="hover:text-[#7f2627] hover:scale-105 transition-all"
               href="#portfolio"
             >
               Trabajos
             </a>
             <a
-              className="hover:text-[#7f2627] hover:scale-105  transition-all "
+              className="hover:text-[#7f2627] hover:scale-105 transition-all"
               href="#about"
             >
               Historia
             </a>
           </div>
-          <a href="#contact">
-            <button className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-3 lg:px-10 py-2 ">
-              Contacto
-            </button>
+          <a
+            href="#contact"
+            className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-3 lg:px-10 py-2"
+          >
+            Contacto
           </a>
         </nav>
-        <div className="fixed md:hidden lg:hidden w-[5vw] h-[15vh]  xl:flex flex-col justify-between items-center top-[50%] right-0 z-50 cursor-pointer max-sm:hidden">
-          <div onClick={() => ScrollToScreen("up")} className="">
-            <BsFillArrowUpCircleFill className=" text-6xl text-zinc-800 hover:scale-110 hover:bg-red-500 rounded-full m-0 p-0 transition-all" />
-          </div>
-          <div onClick={() => ScrollToScreen("down")}>
-            <BsFillArrowDownCircleFill className="text-6xl text-zinc-800 hover:scale-110 hover:bg-red-500 rounded-full m-0 p-0 transition-all" />
-          </div>
+
+        <div className="fixed sm:hidden w-[5vw] h-[15vh] 2xl:flex flex-col justify-between items-center top-[50%] right-0 z-50 cursor-pointer max-sm:hidden">
+          <button
+            onClick={() => ScrollToScreen("up")}
+            className="bg-transparent border-none p-0 m-0 cursor-pointer"
+          >
+            <BsFillArrowUpCircleFill
+              className="text-6xl text-zinc-800 hover:scale-110 hover:bg-red-500 rounded-full transition-all"
+              aria-label="Scroll Up"
+            />
+          </button>
+          <button
+            onClick={() => ScrollToScreen("down")}
+            className="bg-transparent border-none p-0 m-0 cursor-pointer"
+          >
+            <BsFillArrowDownCircleFill
+              className="text-6xl text-zinc-800 hover:scale-110 hover:bg-red-500 rounded-full transition-all"
+              aria-label="Scroll Down"
+            />
+          </button>
         </div>
       </header>
-      <main className="xl:w-[68vw] lg:w-[100vw] md:w-[100vw] max-sm:w-[100vw]  h-[100vh] m-auto max-sm:m-0 text-zinc-800  relative">
-        <div className="absolute top-0 bottom-0 -right-[16vw] xl:flex lg:hidden md:hidden -z-10 -left-[16vw]  max-sm:hidden "></div>
+      <main className="xl:w-[68vw] lg:w-[100vw] md:w-[100vw] max-sm:w-[100vw] h-[100vh] m-auto max-sm:m-0 text-zinc-800 relative">
+        <div className="absolute top-0 bottom-0 -right-[16vw] xl:flex lg:hidden md:hidden -z-10 -left-[16vw] max-sm:hidden"></div>
 
         {children}
       </main>

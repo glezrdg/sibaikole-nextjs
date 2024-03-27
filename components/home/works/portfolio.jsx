@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
-// Assuming the other imports remain the same
-
-// Import the InstagramPost component here
 const images = [
   { url: "/img/PedidosYa/foto1.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto2.jpg", thumbnail: "" },
@@ -110,8 +107,6 @@ const Portfolio = () => {
       if (index === 0) return images.length - 1;
       return index - 1;
     });
-    // setSrc(images[imageIndex].src);
-    // console.log(images[imageIndex].src);
   };
 
   useEffect(() => {
@@ -126,9 +121,10 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="xl:h-[120vh] md:h-[140vh] max-sm:h-[190vh] flex flex-col items-center justify-evenly relative  select-none"
+      className="xl:h-[120vh] md:h-[140vh] max-sm:h-[190vh] flex flex-col items-center justify-evenly relative select-none"
+      aria-label="Portfolio" // Describe the section for better context
     >
-      <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw]  md:hidden lg:hidden max-sm:hidden xl:flex"></div>
+      <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] md:hidden lg:hidden max-sm:hidden xl:flex"></div>
 
       <div className="text-center mt-[12vh] mb-20">
         <span className="bg-[#7f2627] text-zinc-200 p-1">Portafolio</span>
@@ -137,19 +133,29 @@ const Portfolio = () => {
         </h1>
       </div>
 
-      <div className="gallery overflow-y-scroll p-4 ">
+      <div
+        className="gallery overflow-y-scroll p-4"
+        aria-roledescription="gallery"
+      >
         {images.map((item, index) => (
           <div
             key={item.url}
-            className="gallery-item   "
+            className="gallery-item"
             onClick={() => {
               setIsDialogOpen(true);
               dialogRef.current.showModal();
-
               setImageIndex(index);
             }}
+            aria-label={`View larger image ${index + 1}`} // Provide context for the action
+            role="button" // Indicate that this div acts as a button
+            tabIndex="0" // Make it focusable
           >
-            <img src={item.url} alt="" className="rounded-md shadow-sm " />
+            <img
+              src={item.url}
+              alt={`Project ${index + 1}`}
+              className="rounded-md shadow-sm"
+            />
+            {/* Provide meaningful alt text for each image */}
           </div>
         ))}
       </div>
@@ -158,45 +164,44 @@ const Portfolio = () => {
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
+        aria-labelledby="dialogTitle" // Ensures the dialog has a label
         className="modal bg-transparent"
       >
+        <h2 id="dialogTitle" className="sr-only">
+          Image Viewer
+        </h2>
+        {/* Screen-reader-only title for the dialog */}
         <div className="flex items-center justify-center w-[90vw] h-[90vh] bg-transparent">
           <div>
             <img
               src={images[imageIndex].url}
-              alt=""
+              alt={`Viewing image ${imageIndex + 1}`}
               className="max-h-[80vh] max-w-[80vw] select-none"
             />
+            {/* Ensure alt text is descriptive */}
           </div>
 
           <button
-            onClick={() => {
-              dialogRef.current.close();
-            }}
+            aria-label="Close image viewer"
+            onClick={() => dialogRef.current.close()}
             className="absolute top-0 right-5 text-zinc-100 hover:text-rose-900 text-6xl hover:scale-105 transition-all"
           >
             <AiFillCloseCircle />
           </button>
           <button
+            aria-label="Show previous image"
             className="absolute top-[50%] left-5 text-zinc-100 hover:text-rose-900 text-5xl hover:scale-105 transition-all"
             onClick={showPrev}
           >
             <FaArrowCircleLeft />
           </button>
           <button
-            className="absolute top-[50%] right-5 text-zinc-100 hover:text-rose-900 text-5xl  hover:scale-105 transition-all"
+            aria-label="Show next image"
+            className="absolute top-[50%] right-5 text-zinc-100 hover:text-rose-900 text-5xl hover:scale-105 transition-all"
             onClick={showNext}
           >
             <FaArrowCircleRight />
           </button>
-          {/* <div>
-            {images.map((item) => {
-              <img
-                src={item.thumbnail}
-                className="max-h-[20vh] mt-20 p-2 bg-red-200 absolute z-[2000]"
-              />;
-            })}
-          </div> */}
         </div>
       </dialog>
     </section>

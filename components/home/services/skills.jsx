@@ -1,13 +1,3 @@
-import React from "react";
-
-import { FaArrowDown } from "react-icons/fa";
-import { BsPaletteFill } from "react-icons/bs";
-import { HiDesktopComputer } from "react-icons/hi";
-import { FaReact } from "react-icons/fa";
-import { HiOutlineDocumentReport } from "react-icons/hi";
-import { GoGraph } from "react-icons/go";
-import { TbSpeakerphone } from "react-icons/tb";
-import { MdOutlineConstruction } from "react-icons/md";
 import Slider from "./components/slider";
 
 const items = [
@@ -45,12 +35,13 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative xl:h-[100vh] lg:h-[100vh]  w-full flex flex-col items-center justify-evenly   background2   "
+      className="relative xl:h-[100vh] lg:h-[100vh] w-full flex flex-col items-center justify-evenly background2"
+      aria-label="Skills" // General description of the section
     >
-      <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] background2  lg:hidden max-sm:hidden md:hidden xl:flex"></div>
+      <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] background2 lg:hidden max-sm:hidden md:hidden xl:flex"></div>
 
-      <div className="text-center h-1/3 flex flex-col items-center justify-center  max-lg:h-[25vh] ">
-        <span className="bg-[#7f2627] text-zinc-200  p-2 text-sm">
+      <div className="text-center h-1/3 flex flex-col items-center justify-center max-lg:h-[25vh]">
+        <span className="bg-[#7f2627] text-zinc-200 p-2 text-sm">
           ¿Qué sabemos hacer?
         </span>
         <h1 className="font-semibold mt-2 text-5xl max-md:text-4xl">
@@ -58,8 +49,12 @@ const Skills = () => {
         </h1>
       </div>
 
-      <div className="h-[70vh] xl:h-[50vh] w-full lg:w-[70vw] xl:w-[70vw] 2xl:w-[50vw]">
-        <Slider items={items} />
+      <div
+        className="h-[70vh] xl:h-[50vh] w-full lg:w-[70vw] xl:w-[70vw] 2xl:w-[50vw]"
+        aria-roledescription="carousel" // Indicates the role of this component as a carousel
+      >
+        <Slider items={items} aria-label="Our Skills Slider" />
+        {/* Ensure Slider component supports aria-label and is keyboard navigable */}
       </div>
     </section>
   );

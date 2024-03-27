@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
   FaArrowCircleLeft,
@@ -69,12 +69,14 @@ function Slider({ items }) {
         ))}
       </div>
       <button
+        aria-label="showPrevService"
         className="absolute top-[50%] left-2 lg:-left-14 text-4xl hover:scale-105 transition-all"
         onClick={showPrev}
       >
         <FaArrowCircleLeft />
       </button>
       <button
+        aria-label="showNextService"
         className="absolute top-[50%] right-2 lg:-right-14 text-4xl hover:scale-105 transition-all"
         onClick={showNext}
       >
@@ -83,6 +85,7 @@ function Slider({ items }) {
       <div className="absolute flex -bottom-10  ">
         {items.map((_, index) => (
           <button
+            aria-label="selectService"
             key={index}
             className=" mx-2 rounded-full text-2xl"
             onClick={() => {
