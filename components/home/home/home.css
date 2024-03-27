@@ -6,7 +6,7 @@
 .words-up{
     display: block;
     height: 100%;
-    animation: spin_words 4s infinite;
+    animation: spin_words s infinite;
 }
 
 @keyframes spin_words{

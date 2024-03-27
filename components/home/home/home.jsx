@@ -10,13 +10,13 @@ const Home = () => {
       <div className="w-full h-[100vh] background grid place-content-center">
         <div>
           <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-center uppercase">
-            Solo hacemos excelente
+            Profesionalismo en
             <div className="overflow-hidden h-[7vh] md:h-[9vh] lg:h-[13vh] text-center text-[#7f2627]">
-              <span className="font-bold words-up">diseños</span>
-              <span className="font-bold words-up">construcción</span>
-              <span className="font-bold words-up">remodelación</span>
-              <span className="font-bold words-up">arquitectura</span>
-              <span className="font-bold words-up">supervisión</span>
+              <span className="font-bold words-up ">diseños</span>
+              <span className="font-bold words-up ">construcción</span>
+              <span className="font-bold words-up ">remodelación</span>
+              <span className="font-bold words-up ">arquitectura</span>
+              <span className="font-bold words-up ">supervisión</span>
             </div>
           </h1>
         </div>

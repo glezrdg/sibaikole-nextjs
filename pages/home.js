@@ -174,7 +174,7 @@ function HomePrincipal({ children }) {
           >
             SIBAIKOLE
           </a>
-          <div className="hidden xl:flex w-1/3 lg:w-1/2 uppercase justify-evenly items-center font-bold text-lg">
+          <div className="hidden xl:flex w-1/3 lg:w-1/2  justify-evenly items-center font-bold text-lg mt-1">
             <a
               className="hover:text-[#7f2627] hover:scale-105 transition-all"
               href="#home"
@@ -202,7 +202,7 @@ function HomePrincipal({ children }) {
           </div>
           <a
             href="#contact"
-            className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-3 lg:px-10 py-2"
+            className="bg-[#7f2627] rounded-md shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-2 lg:px-8 py-1 "
           >
             Contacto
           </a>
