@@ -10,7 +10,7 @@ const Home = () => {
       <div className="w-full h-[100vh] background grid place-content-center">
         <div>
           <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-center uppercase">
-            Profesionalismo en
+            SOLO HACEMOS EXCELENTE
             <div className="overflow-hidden h-[7vh] md:h-[9vh] lg:h-[13vh] text-center text-[#7f2627]">
               <span className="font-bold words-up ">diseños</span>
               <span className="font-bold words-up ">construcción</span>

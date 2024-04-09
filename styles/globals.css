@@ -276,11 +276,11 @@ html{
 .inputs{
   background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgba(0,0,0,.12);
+    border-bottom: 2px solid rgba(233, 233, 233, 0.712);
     border-radius: 0;
-    color: #000;
+    color: #f1f1f1;
     padding-left: 0!important;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-top: 8px;
 }
 .inputs:focus{
