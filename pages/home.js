@@ -84,14 +84,17 @@ function HomePrincipal({ children }) {
           return;
         } else {
           if (position > item.position) {
-            console.log("se cumple");
             answer = positions[i - 1];
           }
         }
       }
     });
-    window.scrollTo(80, answer.position);
-    console.log(answer.position);
+
+    answer === undefined
+      ? console.log("")
+      : window.scrollTo(80, answer.position);
+
+    // console.log(answer.position);
   };
 
   return (
@@ -202,7 +205,7 @@ function HomePrincipal({ children }) {
           </div>
           <a
             href="#contact"
-            className="bg-[#7f2627] rounded-md shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-2 lg:px-8 py-1 "
+            className="bg-[#7f2627] rounded-sm shadow-md text-zinc-200 hover:text-[#7f2627] hover:bg-zinc-200 hover:scale-105 transition-all font-semibold text-md lg:text-lg px-2 lg:px-8 py-1 "
           >
             Contacto
           </a>

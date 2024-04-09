@@ -42,9 +42,9 @@ const Contact = () => {
               description: "",
             }}
             validationSchema={Yup.object({
-              name: Yup.string().required("Requerido"),
-              email: Yup.string().email("Email Invalido").required("Requerido"),
-              description: Yup.string().required("Requerido"),
+              name: Yup.string().required("Este campo es requerido"),
+              email: Yup.string().email("Email Inválido").required("Este campo es requerido"),
+              description: Yup.string().required("Este campo es requerido"),
             })}
             onSubmit={async (values, actions) => {
               try {
@@ -72,7 +72,7 @@ const Contact = () => {
                 <ErrorMessage
                   name="name"
                   component="p"
-                  className="text-red-500 font-semibold"
+                  className="text-yellow-400 font-semibold"
                 />
               </div>
               <div className="flex flex-col mt-4">
@@ -88,7 +88,7 @@ const Contact = () => {
                 />
                 <ErrorMessage
                   component="p"
-                  className="text-red-500 font-semibold"
+                  className="text-yellow-400 font-semibold"
                   name="email"
                 />
               </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 />
                 <ErrorMessage
                   component="p"
-                  className="text-red-500 font-semibold"
+                  className="text-yellow-400 font-semibold"
                   name="description"
                 />
               </div>
@@ -126,7 +126,7 @@ const Contact = () => {
       <footer className="relative w-full  h-[15vh] flex items-center justify-center bg-zinc-800">
         <div className="absolute top-0 bottom-0 -right-[16vw] -z-10 -left-[16vw] bg-zinc-800 max-lg:hidden md:hidden xl:flex"></div>
         <h1 className="text-white text-xl text-center">
-          Copyright Just Digital AI © 2023 All Rights Reserved.
+          Copyright Just Digital AI © 2024 All Rights Reserved.
         </h1>
       </footer>
     </section>

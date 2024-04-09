@@ -84,7 +84,7 @@ const About = () => {
       </div>
       <div className="grid xl:grid-cols-4 xl:place-items-start lg:gap-3 lg:place-items-center md:grid-cols-4 md:place-items-center w-full font-bold max-sm:grid-cols-2 max-sm:px-5">
         <a
-          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#4267B2] hover:scale-105 transition-all"
+          className="text-2xl lg:text-3xl max-sm:text-lg font-bold flex items-center hover:text-[#4267B2] hover:scale-105 transition-all"
           href="https://www.facebook.com/profile.php?id=100083310222111"
           aria-label="Follow us on Facebook" // Adding an aria-label for screen readers
         >
@@ -93,7 +93,7 @@ const About = () => {
         </a>
 
         <a
-          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#E1306C] hover:scale-105 transition-all"
+          className="text-2xl lg:text-3xl max-sm:text-lg font-bold flex items-center hover:text-[#E1306C] hover:scale-105 transition-all"
           href="https://www.instagram.com/sibaikole/"
           aria-label="Follow us on Instagram" // Adding an aria-label for screen readers
         >
@@ -102,7 +102,7 @@ const About = () => {
         </a>
 
         <a
-          className="text-2xl max-sm:text-lg font-bold flex items-center hover:text-[#25D366] hover:scale-105 transition-all"
+          className="text-2xl lg:text-3xl max-sm:text-lg font-bold flex items-center hover:text-[#25D366] hover:scale-105 transition-all"
           href="https://wa.me/18494909772"
           aria-label="Contact us on Whatsapp" // Adding an aria-label for screen readers
         >
@@ -111,7 +111,7 @@ const About = () => {
         </a>
 
         <div>
-          <h2 className="text-xl max-sm:text-lg font-bold">
+          <h2 className="text-3xl max-sm:text-lg font-bold">
             Santo Domingo, R.D.
           </h2>
         </div>
