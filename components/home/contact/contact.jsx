@@ -133,7 +133,7 @@ const Contact = () => {
                   type="submit"
                   className="font-bold px-10 py-3 mt-5 hover:text-zinc-800 hover:bg-[#7f2627] flex items-center border border-zinc-800 bg-zinc-800 text-white transition"
                 >
-                  {loadingEmail === false ? <ImSpinner /> : "Enviar"}
+                  {loadingEmail === false ? <ImSpinner className="spinner" /> : "Enviar"}
                 </button>
               </div>
             </Form>

@@ -340,6 +340,19 @@ html{
 }
 
 
+.spinner{
+  animation: girar 2s infinite;
+}
+
+@keyframes girar {
+  from {
+   transform:  rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 /* .modal{
   -webkit-box-shadow: 5px 5px 22px 3px rgba(0,0,0,0.63); 
 box-shadow: 5px 5px 22px 3px rgba(0,0,0,0.63);
