@@ -276,7 +276,7 @@ html{
 .inputs{
   background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgba(233, 233, 233, 0.712);
+    border-bottom: 1px solid rgba(233, 233, 233, 0.712);
     border-radius: 0;
     color: #f1f1f1;
     padding-left: 0!important;
