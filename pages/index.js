@@ -12,8 +12,9 @@ function App() {
     <HomePrincipal>
       <Head>
         <title>Sibaikole</title>
+        <link rel="icon" href=".././public/favicon.ico" />
         <meta charset="UTF-8" />
-        <meta name="description" content="Free Web tutorials" />
+        <meta name="description" content="Construccion y mas" />
         <meta
           name="keywords"
           content="construcción, diseños, remodelación, arquitectura, supervisión"

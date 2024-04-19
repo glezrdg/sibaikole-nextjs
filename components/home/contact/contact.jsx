@@ -1,9 +1,23 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import toast, { Toaster } from "react-hot-toast";
 import * as Yup from "yup";
-// import { createEmail } from "../../api/email.controller";
+import axios from "axios";
+import { useState } from "react";
+import { ImSpinner } from "react-icons/im";
 
 const Contact = () => {
+  const [loadingEmail, setloadingEmail] = useState(true);
+
+  const handleSendEmail = async (body) => {
+    try {
+      await axios.post("/api/email", body);
+      console.log("se envio el emial");
+      setloadingEmail(true);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -43,12 +57,15 @@ const Contact = () => {
             }}
             validationSchema={Yup.object({
               name: Yup.string().required("Este campo es requerido"),
-              email: Yup.string().email("Email Inválido").required("Este campo es requerido"),
+              email: Yup.string()
+                .email("Email Inválido")
+                .required("Este campo es requerido"),
               description: Yup.string().required("Este campo es requerido"),
             })}
             onSubmit={async (values, actions) => {
               try {
-                await createEmail(values);
+                setloadingEmail(false);
+                await handleSendEmail(values);
                 toast.success("Email enviado exitosamente!");
                 actions.resetForm();
               } catch (error) {
@@ -116,7 +133,7 @@ const Contact = () => {
                   type="submit"
                   className="font-bold px-10 py-3 mt-5 hover:text-zinc-800 hover:bg-[#7f2627] flex items-center border border-zinc-800 bg-zinc-800 text-white transition"
                 >
-                  Enviar
+                  {loadingEmail === false ? <ImSpinner /> : "Enviar"}
                 </button>
               </div>
             </Form>
