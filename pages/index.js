@@ -11,8 +11,9 @@ function App() {
   return (
     <HomePrincipal>
       <Head>
-        <title>Sibaikole</title>
         <link rel="icon" href=".././public/favicon.ico" />
+        <title>Sibaikole</title>
+        <meta property="og:title" content="Sibaikole" key="title" />
         <meta charset="UTF-8" />
         <meta name="description" content="Construccion y mas" />
         <meta
