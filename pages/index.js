@@ -13,7 +13,11 @@ function App() {
       <Head>
         <link rel="icon" href=".././public/favicon.ico" />
         <title>Sibaikole</title>
-        <meta property="og:title" content="Sibaikole" key="title" />
+        <meta
+          property="og:title"
+          content="Diseño, Arquitectura, Construcción y Remodelación en la Rep.Dom"
+          key="title"
+        />
         <meta charset="UTF-8" />
         <meta name="description" content="Construccion y mas" />
         <meta
