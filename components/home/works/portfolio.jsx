@@ -3,14 +3,13 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 const images = [
+  { url: "/img/neptuno/neptuno-1.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto1.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto2.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto3.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto4.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto5.jpg", thumbnail: "" },
   { url: "/img/PedidosYa/foto6.jpg", thumbnail: "" },
-  { url: "/img/parque habitat/PHC.jpg", thumbnail: "" },
-  { url: "/img/parque habitat/PHC 2.jpg", thumbnail: "" },
   { url: "/img/FOTOS SHEETROCK/s1.jpg", thumbnail: "" },
   { url: "/img/FOTOS SHEETROCK/s2.jpg", thumbnail: "" },
   { url: "/img/FOTOS SHEETROCK/s3.jpg", thumbnail: "" },
@@ -37,7 +36,7 @@ const images = [
   { url: "/img/alameda/ana2.jpg", thumbnail: "" },
   { url: "/img/alameda/ana3.jpg", thumbnail: "" },
   { url: "/img/aniomis/ani1.jpg", thumbnail: "" },
-  { url: "/img/aniomis/ani2.jpg", thumbnail: "" },
+
   { url: "/img/aniomis/ani3.jpg", thumbnail: "" },
   { url: "/img/aniomis/ani4.jpg", thumbnail: "" },
   { url: "/img/aniomis/ani5.jpg", thumbnail: "" },
@@ -55,24 +54,19 @@ const images = [
   { url: "/img/hangar/hangar5.jpg", thumbnail: "" },
   {
     url: "/img/2017 project/este1.jpg",
-    thumbnail: "/img/2017 project/este1.jpg",
   },
   {
     url: "/img/2017 project/este2.jpg",
-    thumbnail: "/img/2017 project/este1.jpg",
   },
   {
     url: "/img/2017 project/este8.jpg",
-    thumbnail: "/img/2017 project/este1.jpg ",
   },
 
   {
     url: "/img/2017 project/este6.jpg",
-    thumbnail: "/img/2017 project/este1.jpg ",
   },
   {
     url: "/img/2017 project/este7.jpg",
-    thumbnail: "/img/2017 project/este1.jpg ",
   },
 ];
 

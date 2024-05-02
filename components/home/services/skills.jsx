@@ -45,12 +45,12 @@ const Skills = () => {
           ¿Qué sabemos hacer?
         </span>
         <h1 className="font-semibold mt-2 text-5xl max-md:text-4xl">
-          Los servicios que brindamos
+          Servicios que brindamos
         </h1>
       </div>
 
       <div
-        className="h-[70vh] xl:h-[50vh] w-full lg:w-[70vw] xl:w-[70vw] 2xl:w-[50vw]"
+        className="h-[70vh] xl:h-[50vh] w-full  lg:w-[70vw] xl:w-[70vw] 2xl:w-[50vw]"
         aria-roledescription="carousel" // Indicates the role of this component as a carousel
       >
         <Slider items={items} aria-label="Our Skills Slider" />
